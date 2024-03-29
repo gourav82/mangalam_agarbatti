@@ -15,7 +15,7 @@ import { isEmptyObj } from "../helper/Utils";
    let config =getConfig();
    if(isEmptyObj(config))
   {
-    saveConfig(res);
+    saveConfig();
       setIsLoading(false);
   }
     else
