@@ -1,0 +1,124 @@
+.banner{
+    background-image: url("/assets/image/d3.jpg");
+    background-size: cover;
+    // height: 90vh;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -20px;
+    @include max(1024) {
+      height: 85vh;
+
+      } 
+    &--table{
+        width: 60%;
+        margin: 120px auto 0 auto;
+        padding: 140px 0;
+        @include max(1024) {
+        flex-direction: column;
+        width: 100%;
+
+        } 
+        &-slider{
+         width: 55%;
+         background-color: rgba($white, .4);
+         @include max(1024) {
+          width: 95%;
+          display: none;
+        } 
+         .image{
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            img{
+                width: 55%;
+                margin: auto 0;
+            }
+         }
+        }
+        &-book{
+          width: 40%;
+          background-color: rgba($white, 1);
+          @include max(1024) {
+            width: 95%;
+            margin-top: 40px;
+          } 
+          .location{
+            width: 100%;
+            border-bottom: 2px solid $error !important;
+            border: transparent;
+            background: transparent;
+            padding: 10px;
+            position: relative;
+
+          }
+          .date{
+           padding: 5px 10px;
+           border-radius: 20px;
+           border: 1px solid $error;
+          }
+          .date-input{
+            padding: 5px 10px;
+            border: none;
+            border-bottom: 2px solid $error !important;
+            font-weight: 800;         
+           }
+           .time{
+            position: relative;
+            &-watch{
+              position: absolute;
+              top: 0px;
+            }
+           }
+           input[type="date"]::-webkit-inner-spin-button,
+           input[type="date"]::-webkit-calendar-picker-indicator {
+           opacity: 0;
+          }
+          .btn_ripple {
+            position: absolute;
+            bottom: 110px;
+            left: 50px;
+            right: 0;
+            transform: translate(700%, 10%);
+            border: none;
+            outline: none;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: block;
+            color: #fff;
+            place-items: center;
+            background-color: $white;
+            font-size: 18px;
+            @include max(1024) {
+              transform: translate(182%, 60%);
+              left: 20px;
+
+            } 
+            cursor: pointer;
+             z-index: 8;
+            animation-name: ripple;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+        
+        
+        @keyframes ripple {
+            0% {
+                box-shadow: 0 0 0 0 rgba(81, 3, 249, 0.267), 0 0 0 0 10px rgba(252, 1, 1, 0.267);
+            }
+        
+            80% {
+                box-shadow: 0 0 0 20px rgba(72, 2, 250, 0.267), 0 0 0 40px rgba(234, 146, 146, 0.267);
+            }
+        
+            100% {
+                box-shadow: 0 0 0 0 rgba(244, 4, 4, 0.267), 0 0 0 0 10px rgba(253, 3, 3, 0.267);
+            }
+        }
+        }
+        }
+        
+    }
+    
